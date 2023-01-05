@@ -2,6 +2,7 @@
 """
 Main file for testing
 """
+
 def minOperations(n):                                                                                                                           
     "This is a line of text"
     if n < 2:                                                                                                                               
