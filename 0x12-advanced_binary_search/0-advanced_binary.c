@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * @advb - Entry point
+ * advb - Entry point
  * @array: value
  * @left: value
  * @right: value
