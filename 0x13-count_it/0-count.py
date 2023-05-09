@@ -12,8 +12,10 @@ def count_words(subreddit, word_list, count={}, after=""):
     if after is None:
         c = {}
         for key, value in count.items():
-            if key.lower() in c: c[key.lower()] += value
-            else: c[key.lower()] = value
+            if key.lower() in c:
+                c[key.lower()] += value
+            else:
+                c[key.lower()] = value
         word_list = [[key, value] for key, value in c.items()]
         word_list = sorted(word_list, key=lambda x: (-x[1], x[0]))
         for word_count in word_list:
