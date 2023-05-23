@@ -17,19 +17,15 @@ char *_itoa(int i, char b[])
 		i *= -1;
 	}
 	shifter = i;
-	do
-	{
+	do {
 		++p;
 		shifter = shifter / 10;
-	}
-	while (shifter);
+	} while (shifter);
 	*p = '\0';
-	do
-	{
+	do {
 		*--p = digit[i % 10];
 		i = i / 10;
-	}
-	while (i);
+	} while (i);
 	return (b);
 }
 /**
