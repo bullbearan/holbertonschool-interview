@@ -5,10 +5,12 @@
  * @b: value
  * Return: value
  */
-char* _itoa(int i, char b[]){
+char* _itoa(int i, char b[])
+	{
 	char const digit[] = "0123456789";
 	char* p = b;
-	if(i<0)
+
+	if (i < 0)
 	{
 		*p++ = '-';
 		i *= -1;
@@ -17,17 +19,17 @@ char* _itoa(int i, char b[]){
 	do
 	{
 		++p;
-		shifter = shifter/10;
+		shifter = shifter / 10;
 	}
-	while(shifter);
+	while (shifter);
 	*p = '\0';
 	do
 	{
-		*--p = digit[i%10];
-		i = i/10;
+		*--p = digit[i % 10];
+		i = i / 10;
 	}
-	while(i);
-	return b;
+	while (i);
+	return (b);
 }
 /**
  * _atoi - check
@@ -52,7 +54,7 @@ int _atoi(const char* str)
 	{
 		base = 10 * base + (str[i++] - '0');
 	}
-	return base * sign;
+	return (base * sign);
 }
 /**
  * check_number - check
