@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-"This is a line of text"
+"""tantfo nft wyft nfot nfu wytnf wty
+tfwuytnufwtnyfwutnwftnwfyt tfyuntwftw
+ftwyfntufwytnfutufwytnfwutufwtnyfwut"""
 
 
 def makeChange(coins, total):
-    "This is a line of text"
+    """ntywftnw tfyutn fwtvahf weitha
+    tfhwth aitafthwfthftiatatfnwutha
+    tfywtfnwtufyntuatnfathatefwhotaw
+    tfwythfaut"""
     if total <= 0:
         return 0
     if total in coins:
