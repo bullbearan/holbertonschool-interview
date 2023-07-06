@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"This is a line of text"
+"a"
 
 
 def makeChange(coins, total):
-    "This is a line of text"
+    "a"
     if total <= 0:
         return 0
     if len(coins) <= 0:
