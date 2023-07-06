@@ -11,8 +11,6 @@ def makeChange(coins, total):
     tfwythfaut"""
     if total <= 0:
         return 0
-    if total in coins:
-        return 1
     current_sum = 0
     res = 0
     coins.sort(reverse=True)
