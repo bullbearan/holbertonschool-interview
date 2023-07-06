@@ -1,16 +1,24 @@
 #!/usr/bin/python3
-"a"
+"This is a line of text"
 
 
 def makeChange(coins, total):
-    "a"
+    "This is a line of text"
     if total <= 0:
         return 0
+    if total in coins:
+        return 1
     if len(coins) <= 0:
         return -1
-    r = [total + 1] * (total + 1)
-    r[0] = 0
-    for c in coins:
-        for i in range(c, total + 1):
-            r[i] = min(r[i], r[i - c] + 1)
-    return r[-1] if r[-1] != total + 1 else -1
+    current_sum = 0
+    res = 0
+    coins.sort(reverse=True)
+    for coin in coins:
+        while current_sum < total:
+            current_sum += coin
+            res += 1
+        if current_sum == total:
+            return res
+        current_sum -= coin
+        res -= 1
+    return -1
