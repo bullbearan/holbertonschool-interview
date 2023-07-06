@@ -3,6 +3,7 @@
 
 
 def makeChange(coins, total):
+    "This is a line of text"
     if total <= 0:
         return 0
     current_sum = 0
