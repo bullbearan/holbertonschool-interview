@@ -14,6 +14,8 @@ def makeChange(coins, total):
     res[0] = 0
     for i in range(1, total + 1):
         for coin in coins:
-            if i - coin >= 0:
+            if i >= coin:
                 res[i] = min(res[i], res[i - coin] + 1)
+            else:
+                break
     return -1 if res[total] == total + 1 else res[total]
