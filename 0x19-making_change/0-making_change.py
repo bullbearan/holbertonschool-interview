@@ -10,10 +10,7 @@ def makeChange(coins, total):
         return -1
     r = [total + 1] * (total + 1)
     r[0] = 0
-    for i in range(1, total + 1):
-        for c in coins:
-            if i >= c:
-                r[i] = min(r[i], r[i - c] + 1)
-            else:
-                break
+    for c in coins:
+        for i in range(c, total + 1):
+            r[i] = min(r[i], r[i - c] + 1)
     return r[total] if r[total] != total + 1 else -1
