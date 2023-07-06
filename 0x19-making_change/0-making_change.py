@@ -1,14 +1,7 @@
 #!/usr/bin/python3
-"""tantfo nft wyft nfot nfu wytnf wty
-tfwuytnufwtnyfwutnwftnwfyt tfyuntwftw
-ftwyfntufwytnfutufwytnfwutufwtnyfwut"""
 
 
 def makeChange(coins, total):
-    """ntywftnw tfyutn fwtvahf weitha
-    tfhwth aitafthwfthftiatatfnwutha
-    tfywtfnwtufyntuatnfathatefwhotaw
-    tfwythfaut"""
     if total <= 0:
         return 0
     current_sum = 0
