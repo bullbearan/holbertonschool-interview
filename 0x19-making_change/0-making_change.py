@@ -10,11 +10,11 @@ def makeChange(coins, total):
     res = 0
     coins.sort(reverse=True)
     while (i < len(coins)):
-        if total - coins[i] >= 0:
-            total -= coins[i]
-            res += 1
-            i -= 1
         if total == 0:
             return res
-        i += 1
+        if coins[i] > total:
+            i += 1
+        else:
+            total -= coins[i]
+            res += 1
     return -1
