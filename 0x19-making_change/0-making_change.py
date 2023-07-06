@@ -6,16 +6,14 @@ def makeChange(coins, total):
     "This is a line of text"
     if total <= 0:
         return 0
-    current_sum = total
-    i = 0
-    res = 0
-    coins.sort(reverse=True)
-    while (i < len(coins)):
-        if current_sum == 0:
-            return res
-        if coins[i] > current_sum:
-            i += 1
-        else:
-            current_sum -= coins[i]
-            res += 1
-    return -1
+    if total in coins:
+        return 1
+    res = [total + 1] * (total + 1)
+    res[0] = 0
+    for i in range(1, total + 1):
+        for coin in coins:
+            if i - coin >= 0:
+                res[i] = min(res[i], res[i - coin] + 1)
+    if res[total] == total + 1:
+        return -1
+    return res[total]
