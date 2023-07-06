@@ -8,6 +8,8 @@ def makeChange(coins, total):
         return 0
     if len(coins) <= 0:
         return -1
+    if total in coins:
+        return 1
     res = [total + 1] * (total + 1)
     res[0] = 0
     for i in range(1, total + 1):
