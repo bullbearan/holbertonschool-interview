@@ -16,6 +16,8 @@ List *add_node_end(List **list, char *str)
 	if (node == NULL)
 		return (NULL);
 	node->str = strdup(str);
+	if (!node->str)
+		return (NULL);
 
 	if (*list == NULL)
 	{
@@ -47,6 +49,8 @@ List *add_node_begin(List **list, char *str)
 	if (node == NULL)
 		return (NULL);
 	node->str = strdup(str);
+	if (!node->str)
+		return (NULL);
 
 	if (*list == NULL)
 	{
