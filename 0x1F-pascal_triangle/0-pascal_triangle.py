@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 "Titans aeotnas etoa"
 
+
 def pascal_triangle(n):
     "Titans aeotnas etoa"
     if n <= 0:
